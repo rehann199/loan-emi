@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">Loan EMI system overview</title>
+  <desc id="d">A Flutter Android app with a pure calculation layer, on-device storage, optional Firebase sync, a Play billing entitlement and a mediated ad layer with remote placement switches.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1b2b"/>
+      <stop offset="1" stop-color="#0f2a33"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6f3f5; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #7fd0d4; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 16px; }
+      .s { font-size: 14px; fill: #a3cfd4; }
+      .app { fill: #10303a; stroke: #2fb5bd; stroke-width: 2; }
+      .box { fill: #164451; stroke: #2a8c96; stroke-width: 1.5; }
+      .core { fill: #12384a; stroke: #6fd3da; stroke-width: 2.5; }
+      .db  { fill: #14283a; stroke: #3a8fd9; stroke-width: 2; }
+      .fb  { fill: #35300f; stroke: #e6c32f; stroke-width: 2; }
+      .nat { fill: #2a2a14; stroke: #b9c03a; stroke-width: 2; }
+      .arrow { stroke: #2fb5bd; stroke-width: 2; fill: none; marker-end: url(#a); }
+      .arrow2 { stroke: #e6c32f; stroke-width: 2; fill: none; marker-end: url(#a2); stroke-dasharray: 6 4; }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#2fb5bd"/></marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#e6c32f"/></marker>
+  </defs>
+  <rect width="1200" height="600" rx="16" fill="url(#bg)"/>
+  <text x="40" y="52" class="h">Loan EMI: system overview</text>
+  <text x="40" y="78" class="s">Conceptual view. Component names describe responsibilities, not production identifiers.</text>
+
+  <rect x="40" y="104" width="700" height="470" rx="12" class="app"/>
+  <text x="60" y="134" class="k">FLUTTER APP (ANDROID)</text>
+
+  <rect x="60" y="150" width="320" height="100" rx="8" class="box"/>
+  <text x="76" y="178" class="k">SCREENS</text>
+  <text x="76" y="202" class="b">Calculator · Result · Schedule</text>
+  <text x="76" y="224" class="b">My Loans · Tools · Settings</text>
+
+  <rect x="400" y="150" width="320" height="100" rx="8" class="box"/>
+  <text x="416" y="178" class="k">APP STATE</text>
+  <text x="416" y="202" class="b">Provider + change notifier,</text>
+  <text x="416" y="224" class="b">free-tier limits, prefs</text>
+
+  <rect x="60" y="272" width="660" height="130" rx="8" class="core"/>
+  <text x="76" y="300" class="k">PURE CALCULATION LAYER (NO UI, NO I/O)</text>
+  <text x="76" y="326" class="b">Reducing-balance EMI and schedule · Prepayment · Flat-rate · Comparison</text>
+  <text x="76" y="350" class="b">Refinance · Rate stress · APR (bisection) · Borrowing power · Affordability</text>
+  <text x="76" y="374" class="s">Interest · Compound · Savings / SIP · Inflation · Loan progress and totals</text>
+
+  <rect x="60" y="424" width="320" height="130" rx="8" class="db"/>
+  <text x="76" y="452" class="k">ON-DEVICE STORAGE</text>
+  <text x="76" y="476" class="b">Saved loans (inputs only),</text>
+  <text x="76" y="498" class="b">paid periods, loan types,</text>
+  <text x="76" y="520" class="b">history, preferences</text>
+
+  <rect x="400" y="424" width="320" height="130" rx="8" class="box"/>
+  <text x="416" y="452" class="k">EXPORT AND SHARE</text>
+  <text x="416" y="476" class="b">CSV (raw numbers) · PDF</text>
+  <text x="416" y="498" class="b">Result summary text</text>
+  <text x="416" y="520" class="s">Through the system share sheet</text>
+
+  <rect x="800" y="104" width="360" height="120" rx="12" class="fb"/>
+  <text x="820" y="134" class="k">FIREBASE</text>
+  <text x="820" y="158" class="b">Auth: Google, Apple (optional)</text>
+  <text x="820" y="180" class="b">Firestore: user-scoped backup</text>
+  <text x="820" y="202" class="s">Analytics · Crashlytics · Perf · Messaging</text>
+
+  <rect x="800" y="250" width="360" height="100" rx="12" class="nat"/>
+  <text x="820" y="280" class="k">GOOGLE PLAY</text>
+  <text x="820" y="304" class="b">Subscription entitlement</text>
+  <text x="820" y="326" class="s">Monthly / yearly plans, in-app update</text>
+
+  <rect x="800" y="376" width="360" height="110" rx="12" class="nat"/>
+  <text x="820" y="406" class="k">AD LAYER (FREE USERS)</text>
+  <text x="820" y="430" class="b">Mediation SDK, vendored plugin fork</text>
+  <text x="820" y="452" class="s">Remote per-placement switches via Firestore</text>
+
+  <rect x="800" y="508" width="360" height="66" rx="12" class="box"/>
+  <text x="820" y="536" class="k">NATIVE ANDROID</text>
+  <text x="820" y="558" class="s">Kotlin splash and main activity, R8 release</text>
+
+  <path d="M380 200 L398 200" class="arrow"/>
+  <path d="M220 252 L220 270" class="arrow"/>
+  <path d="M560 252 L560 270" class="arrow"/>
+  <path d="M220 404 L220 422" class="arrow"/>
+  <path d="M560 404 L560 422" class="arrow"/>
+  <path d="M722 190 L798 170" class="arrow2"/>
+  <path d="M722 300 L798 300" class="arrow2"/>
+  <path d="M722 430 L798 430" class="arrow2"/>
+</svg>
